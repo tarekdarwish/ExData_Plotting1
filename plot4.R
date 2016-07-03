@@ -37,22 +37,8 @@ legend("topright",
        lty = c(1,1,1))
 
 # Plot 4: time vs Global reactive power
-plot(extdata$DateTime, extdata$Global_reactive_power, lty=1,type="l",lwd=1, xlab = "" , 
+plot(extdata$DateTime, extdata$Global_reactive_power, lty=1,type="l",lwd=1, xlab = "datetime" , 
      ylab = "Global_reactive_power")
-
-
-# Initialize plot
-plot(extdata$DateTime, extdata$Sub_metering_1, type = "n", xlab = "", ylab = "Energy Sub Metering")
-# Add the sub metering 1 data with black color
-points(extdata$DateTime, extdata$Sub_metering_1, lty=1,type="l",lwd=1)
-# Add the sub metering 2 data with red color
-points(extdata$DateTime, extdata$Sub_metering_2, lty=1,type="l",lwd=1, col = "red")
-# Add the sub metering 3 data with blue color
-points(extdata$DateTime, extdata$Sub_metering_3, lty=1,type="l",lwd=1, col = "blue")
-legend("topright", 
-       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
-       col = c("black", "red", "blue"),
-       lty = c(1,1,1))
 
 dev.copy(png, "plot4.png")
 dev.off()
