@@ -15,7 +15,7 @@ par(mfrow=c(2,2))
 
 # Plot 1: time vs Global active power
 plot(extdata$DateTime, extdata$Global_active_power, lty=1,type="l",lwd=1, xlab = "" , 
-     ylab = "Global Active Power (killowatts)")
+     ylab = "Global Active Power")
 
 # Plot 2: time vs Voltage
 plot(extdata$DateTime, extdata$Voltage, lty=1,type="l",lwd=1, xlab = "datetime" , 
@@ -34,7 +34,7 @@ points(extdata$DateTime, extdata$Sub_metering_3, lty=1,type="l",lwd=1, col = "bl
 legend("topright", 
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
        col = c("black", "red", "blue"),
-       lty = c(1,1,1))
+       lty = c(1,1,1), bty = "n")
 
 # Plot 4: time vs Global reactive power
 plot(extdata$DateTime, extdata$Global_reactive_power, lty=1,type="l",lwd=1, xlab = "datetime" , 
