@@ -8,7 +8,7 @@ data$Time <- chron(times = data$Time)
 #extract data for just 2 days
 extdata <- filter (data, (Date == "2007-02-01" | Date == "2007-02-02"))
 # global set device to one plot
-par(mfro=c(1,1))
+par(mfrow=c(1,1))
 # Create Histogram for Global Active Power column
 hist(extdata$Global_active_power, col= "red", xlab = "Global Active Power (killowatts)",
      main = "Global Active Power")
